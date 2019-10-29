@@ -36,4 +36,11 @@
 		<property name="moreInfo" value="http://www.wikipedia.es"/>
 		<property name="text" value="Description of announcement"/>
 	</bean>
+	
+	<bean id="announcement04" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Sample Announcement 04"/>
+		<property name="moment" value="2018/12/23 23:14"/>
+		<property name="moreInfo" value="http://www.wikipedia.es"/>
+		<property name="text" value="Description of announcement 4"/>
+	</bean>
 </beans>
