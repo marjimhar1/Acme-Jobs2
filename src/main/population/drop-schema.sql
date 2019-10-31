@@ -27,6 +27,8 @@
 
     drop table if exists `consumer`;
 
+    drop table if exists `investor_record`;
+
     drop table if exists `provider`;
 
     drop table if exists `user_account`;

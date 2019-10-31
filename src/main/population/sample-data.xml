@@ -16,5 +16,26 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
+	
+	<bean id="InvestorRecord01" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="investorName" value="InvestorName01"/>
+		<property name="sector" value="Sector01"/>
+		<property name="investingStatement" value="InvestingStatement01"/>
+		<property name="stars" value="4"/>
+	</bean>
+	
+	<bean id="InvestorRecord02" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="investorName" value="InvestorName02"/>
+		<property name="sector" value="Sector02"/>
+		<property name="investingStatement" value="InvestingStatement02"/>
+		<property name="stars" value="0"/>
+	</bean>
+	
+	<bean id="InvestorRecord03" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="investorName" value="InvestorName03"/>
+		<property name="sector" value="Sector03"/>
+		<property name="investingStatement" value="InvestingStatement03"/>
+		<property name="stars" value="5"/>
+	</bean>
 
 </beans>

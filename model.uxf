@@ -296,4 +296,20 @@ m2=*
 has v</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>721</x>
+      <y>483</y>
+      <w>126</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>InvestorRecord
+--
++ investorName
++ sector
++ investingStatement
++ stars</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>
