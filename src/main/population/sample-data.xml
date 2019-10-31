@@ -43,4 +43,32 @@
 		<property name="moreInfo" value="http://www.wikipedia.es"/>
 		<property name="text" value="Description of announcement 4"/>
 	</bean>
+	
+	<bean id="request01" class="acme.entities.requests.Request">
+		<property name="title" value="Sample request 01"/>
+		<property name="creationMoment" value="2019/10/15 10:00"/>
+		<property name="deadLine" value="2020/11/02 10:00"/>
+		<property name="text" value="Sample text 01"/>
+		<property name="reward" value="#{'6.0€'}"/>
+		<property name="ticker" value="RFJAK-42948"/>
+	</bean>
+	
+	<bean id="request02" class="acme.entities.requests.Request">
+		<property name="title" value="Sample request 02"/>
+		<property name="creationMoment" value="2019/10/18 10:00"/>
+		<property name="deadLine" value="2020/12/10 15:00"/>
+		<property name="text" value="Sample text 02"/>
+		<property name="reward" value="#{'13.7€'}"/>
+		<property name="ticker" value="RLEOK-12345"/>
+	</bean>
+	
+	<bean id="request03" class="acme.entities.requests.Request">
+		<property name="title" value="Sample request 03"/>
+		<property name="creationMoment" value="2019/10/15 10:00"/>
+		<property name="deadLine" value="2021/01/01 20:00"/>
+		<property name="text" value="Sample request 03"/>
+		<property name="reward" value="#{'1.4€'}"/>
+		<property name="ticker" value="RFPQM-70185"/>
+	</bean>
+
 </beans>
