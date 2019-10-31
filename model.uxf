@@ -299,12 +299,27 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>198</x>
-      <y>605</y>
-      <w>418</w>
-      <h>264</h>
+      <x>100</x>
+      <y>400</y>
+      <w>400</w>
+      <h>91</h>
     </coordinates>
-    <panel_attributes>Request
+    <panel_attributes>Announcement
+--
++ title: String (NotBlank)
++ moment: Date (Temporal(TIMESTAMP),Past)
++ moreInfo: String (URL)
++ text: String (NotBlank)</panel_attributes>
+   </element>
+   <element>
+     <id>UMLClass</id>
+     <coordinates>
+      <x>200</x>
+      <y>400</y>
+      <w>400</w>
+      <h>264</h>
+     </coordinates>
+     <panel_attributes>Request
 --
 + title
 + creationMoment
@@ -312,6 +327,7 @@ has v</panel_attributes>
 + text
 + reward
 + ticker</panel_attributes>
+
     <additional_attributes/>
   </element>
 </diagram>
