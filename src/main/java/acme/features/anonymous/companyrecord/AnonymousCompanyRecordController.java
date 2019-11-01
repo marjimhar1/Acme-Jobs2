@@ -20,7 +20,7 @@ public class AnonymousCompanyRecordController extends AbstractController<Anonymo
 	private AnonymousCompanyRecordListService	listService;
 
 	@Autowired
-	private AnonymousCompanyRecordListService	showService;
+	private AnonymousCompanyRecordShowService	showService;
 
 
 	@PostConstruct
