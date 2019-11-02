@@ -296,4 +296,21 @@ m2=*
 has v</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>399</y>
+      <w>245</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>Challenge
+--
++ title= String (NotBlank)
++ deadline= Date (Temporal(TIMESTAMP),Future)
++ description = String (NotBlank)
++ goal= String (NotBlank)
++ reward= Money (NotNull,Valid)</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>
