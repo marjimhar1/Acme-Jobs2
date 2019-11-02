@@ -296,6 +296,7 @@ m2=*
 has v</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
+  
   <element>
     <id>UMLClass</id>
     <coordinates>
@@ -311,6 +312,7 @@ has v</panel_attributes>
 + moreInfo: String (URL)
 + text: String (NotBlank)</panel_attributes>
    </element>
+  
    <element>
      <id>UMLClass</id>
      <coordinates>
@@ -328,6 +330,23 @@ has v</panel_attributes>
 + reward
 + ticker</panel_attributes>
 
+    <additional_attributes/>
+  </element>
+  
+    <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>873</x>
+      <y>513</y>
+      <w>234</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>InvestorRecord
+--
++ investorName: String {NotBlank}
++ sector: String {NotBlank}
++ investingStatement: String {NotBlank}
++ stars: Integer {min(0), Max(5)}</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
