@@ -333,7 +333,7 @@ has v</panel_attributes>
     <additional_attributes/>
   </element>
   
-   <element>
+  <element>
     <id>UMLClass</id>
     <coordinates>
       <x>873</x>
@@ -350,7 +350,7 @@ has v</panel_attributes>
     <additional_attributes/>
   </element>
   
-   <element>
+  <element>
     <id>UMLClass</id>
     <coordinates>
       <x>196</x>
@@ -370,6 +370,24 @@ CompanyRecord
 + email: String (NotBlank, email)
 + stars: Number ({0-5})
 + / incorporated: Boolean ({Transient})</panel_attributes>
+    <additional_attributes/>
+  </element>
+  
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>399</y>
+      <w>245</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>Challenge
+--
++ title= String (NotBlank)
++ deadline= Date (Temporal(TIMESTAMP),Future)
++ description = String (NotBlank)
++ goal= String (NotBlank)
++ reward= Money (NotNull,Valid)</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
