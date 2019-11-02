@@ -2,6 +2,7 @@
 package acme.entities.companyrecords;
 
 import javax.persistence.Entity;
+import javax.persistence.Transient;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -49,15 +50,15 @@ public class CompanyRecord extends DomainEntity {
 	@Max(5)
 	private Integer				stars;
 
-	/*
-	 * public static Boolean isInc() {
-	 * Boolean res = false;
-	 *
-	 * if(companyName.contains("Inc.")) {
-	 * res = true;
-	 * }
-	 *
-	 * return res;
-	 * }
-	 */
+
+	@Transient
+	public Boolean getIncorporated() {
+		Boolean res = false;
+
+		if (this.companyName.contains("Inc.")) {
+			res = true;
+		}
+
+		return res;
+	}
 }

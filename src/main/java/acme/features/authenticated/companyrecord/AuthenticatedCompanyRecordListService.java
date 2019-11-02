@@ -1,5 +1,7 @@
 
-package acme.features.anonymous.companyrecord;
+package acme.features.authenticated.companyrecord;
+
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,14 +9,14 @@ import org.springframework.stereotype.Service;
 import acme.entities.companyrecords.CompanyRecord;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Anonymous;
-import acme.framework.services.AbstractShowService;
+import acme.framework.entities.Authenticated;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class AnonymousCompanyRecordShowService implements AbstractShowService<Anonymous, CompanyRecord> {
+public class AuthenticatedCompanyRecordListService implements AbstractListService<Authenticated, CompanyRecord> {
 
 	@Autowired
-	private AnonymousCompanyRecordRepository repository;
+	AuthenticatedCompanyRecordRepository repository;
 
 
 	@Override
@@ -30,18 +32,16 @@ public class AnonymousCompanyRecordShowService implements AbstractShowService<An
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "companyName", "sector", "ceo", "description", "website", "number", "email", "stars", "incorporated");
+		request.unbind(entity, model, "companyName", "email");
 	}
 
 	@Override
-	public CompanyRecord findOne(final Request<CompanyRecord> request) {
+	public Collection<CompanyRecord> findMany(final Request<CompanyRecord> request) {
 		assert request != null;
 
-		CompanyRecord result;
-		int id;
+		Collection<CompanyRecord> result;
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneById(id);
+		result = this.repository.findManyAll();
 
 		return result;
 	}

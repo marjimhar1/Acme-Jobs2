@@ -16,6 +16,7 @@ anonymous.company-record.form.label.website = Página web:
 anonymous.company-record.form.label.number = Número de teléfono:
 anonymous.company-record.form.label.email = Email:
 anonymous.company-record.form.label.stars = Número de estrellas:
+anonymous.company-record.form.label.incorporated = Incorporado (True=Empresa Incorporada, False=No Incorporada):
 
 anonymous.company-record.form.button.return = Volver
 
