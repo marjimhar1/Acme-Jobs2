@@ -92,4 +92,37 @@
 		<property name="stars" value="5"/>
 	</bean>
   
+  <bean id="companyrecord01" class="acme.entities.companyrecords.CompanyRecord">
+		<property name="companyName" value="Arme Yoh Andalucía, Inc."/>
+		<property name="sector" value="Design and Testing"/>
+		<property name="ceo" value="Andrés Fernández Rodríguez"/>
+		<property name="description" value="This is a description"/>
+		<property name="website" value="http://www.example.com"/>
+		<property name="number" value="+2 (678) 1234567"/>
+		<property name="email" value="example@email.com"/>
+		<property name="stars" value="5"/>	
+	</bean>
+	
+	<bean id="companyrecord02" class="acme.entities.companyrecords.CompanyRecord">
+		<property name="companyName" value="Matutano, LLC"/>
+		<property name="sector" value="Feeding"/>
+		<property name="ceo" value="Mario David Jiménez Hartman"/>
+		<property name="description" value="This is another description"/>
+		<property name="website" value="http://www.example2.com"/>
+		<property name="number" value="(0) 999999"/>
+		<property name="email" value="example2@email.com"/>
+		<property name="stars"><null/></property>
+	</bean>
+	
+	<bean id="companyrecord03" class="acme.entities.companyrecords.CompanyRecord">
+		<property name="companyName" value="Dothraki Horses, Inc."/>
+		<property name="sector" value="Animal Renting"/>
+		<property name="ceo" value="Daenerys Targaryen, Mother of Dragons"/>
+		<property name="description" value="This is a dothraki description"/>
+		<property name="website" value="http://www.example3.com"/>
+		<property name="number" value="+1 1234567890"/>
+		<property name="email" value="example3@email.com"/>
+		<property name="stars" value="5"/>	
+	</bean>
+  
 </beans>
