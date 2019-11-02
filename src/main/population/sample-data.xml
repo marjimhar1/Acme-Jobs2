@@ -16,5 +16,37 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
+	
+	<!-- Offers -->
+	
+	<bean id="offer01" class="acme.entities.offers.Offer">
+	<property name="title" value="Offer 1"/>
+	<property name="moment" value="2000/10/10 10:00"/>
+	<property name="deadline" value="2060/10/10 10:00"/>
+	<property name="text" value="This is an example for the offer 1"/>
+	<property name="minPrice" value="10.50€"/>
+	<property name="maxPrice" value="100.50€"/>
+	<property name="ticker" value="RABCD-12345"/>
+	</bean>
+	
+	<bean id="offer02" class="acme.entities.offers.Offer">
+	<property name="title" value="Offer 2"/>
+	<property name="moment" value="2001/11/11 11:00"/>
+	<property name="deadline" value="2061/11/11 11:00"/>
+	<property name="text" value="This is an example for the offer 2"/>
+	<property name="minPrice" value="11.50€"/>
+	<property name="maxPrice" value="111.50€"/>
+	<property name="ticker" value="RDCBA-54321"/>
+	</bean>
+	
+	<bean id="offer03" class="acme.entities.offers.Offer">
+	<property name="title" value="Offer 3"/>
+	<property name="moment" value="2002/12/12 12:00"/>
+	<property name="deadline" value="2062/12/12 12:00"/>
+	<property name="text" value="This is an example for the offer 3"/>
+	<property name="minPrice" value="12€"/>
+	<property name="maxPrice" value="122€"/>
+	<property name="ticker" value="RACDB-32451"/>
+	</bean>
 
 </beans>

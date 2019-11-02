@@ -296,4 +296,24 @@ m2=*
 has v</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>182</x>
+      <y>364</y>
+      <w>259</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Offer
+--
++ title: String (notBlank)
++ moment: Date (Temporal(TIMESTAMP), Past)
++ deadline: Date (Temporal(TIMESTAMP), Future)
++ text: String (notBlank)
++ minPrice: Money (valid)
++ maxPrice: Money (valid)
++ ticker: String (notBlank, pattern)
++ /rangePrice: String (persistent)</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>
