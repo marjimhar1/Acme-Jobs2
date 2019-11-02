@@ -16,8 +16,83 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
+	<bean id="announcement01" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Sample Announcement 01"/>
+		<property name="moment" value="2019/02/14 10:14"/>
+		<property name="moreInfo"><null/></property>
+		<property name="text" value="Description of announcement"/>
+	</bean>
 	
-	<bean id="companyrecord01" class="acme.entities.companyrecords.CompanyRecord">
+	<bean id="announcement02" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Sample Announcement 02"/>
+		<property name="moment" value="2019/10/10 15:30"/>
+		<property name="moreInfo" value="http://www.google.es"/>
+		<property name="text" value="Description of announcement 2"/>
+	</bean>
+	
+	<bean id="announcement03" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Sample Announcement 03"/>
+		<property name="moment" value="2018/10/23 23:14"/>
+		<property name="moreInfo" value="http://www.wikipedia.es"/>
+		<property name="text" value="Description of announcement"/>
+	</bean>
+	
+	<bean id="announcement04" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Sample Announcement 04"/>
+		<property name="moment" value="2018/12/23 23:14"/>
+		<property name="moreInfo" value="http://www.wikipedia.es"/>
+		<property name="text" value="Description of announcement 4"/>
+	</bean>
+	
+	<bean id="request01" class="acme.entities.requests.Request">
+		<property name="title" value="Sample request 01"/>
+		<property name="creationMoment" value="2019/10/15 10:00"/>
+		<property name="deadLine" value="2020/11/02 10:00"/>
+		<property name="text" value="Sample text 01"/>
+		<property name="reward" value="#{'6.0€'}"/>
+		<property name="ticker" value="RFJAK-42948"/>
+	</bean>
+	
+	<bean id="request02" class="acme.entities.requests.Request">
+		<property name="title" value="Sample request 02"/>
+		<property name="creationMoment" value="2019/10/18 10:00"/>
+		<property name="deadLine" value="2020/12/10 15:00"/>
+		<property name="text" value="Sample text 02"/>
+		<property name="reward" value="#{'13.7€'}"/>
+		<property name="ticker" value="RLEOK-12345"/>
+	</bean>
+	
+	<bean id="request03" class="acme.entities.requests.Request">
+		<property name="title" value="Sample request 03"/>
+		<property name="creationMoment" value="2019/10/15 10:00"/>
+		<property name="deadLine" value="2021/01/01 20:00"/>
+		<property name="text" value="Sample request 03"/>
+		<property name="reward" value="#{'1.4€'}"/>
+		<property name="ticker" value="RFPQM-70185"/>
+	</bean>
+
+  <bean id="InvestorRecord01" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="investorName" value="InvestorName01"/>
+		<property name="sector" value="Sector01"/>
+		<property name="investingStatement" value="InvestingStatement01"/>
+		<property name="stars" value="4"/>
+	</bean>
+	
+	<bean id="InvestorRecord02" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="investorName" value="InvestorName02"/>
+		<property name="sector" value="Sector02"/>
+		<property name="investingStatement" value="InvestingStatement02"/>
+		<property name="stars" value="0"/>
+	</bean>
+	
+	<bean id="InvestorRecord03" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="investorName" value="InvestorName03"/>
+		<property name="sector" value="Sector03"/>
+		<property name="investingStatement" value="InvestingStatement03"/>
+		<property name="stars" value="5"/>
+	</bean>
+  
+  <bean id="companyrecord01" class="acme.entities.companyrecords.CompanyRecord">
 		<property name="companyName" value="Arme Yoh Andalucía, Inc."/>
 		<property name="sector" value="Design and Testing"/>
 		<property name="ceo" value="Andrés Fernández Rodríguez"/>
@@ -49,5 +124,5 @@
 		<property name="email" value="example3@email.com"/>
 		<property name="stars" value="5"/>	
 	</bean>
-
+  
 </beans>
