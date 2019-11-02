@@ -17,11 +17,15 @@ import acme.framework.entities.Authenticated;
 public class AuthenticatedInvestorRecordController extends AbstractController<Authenticated, InvestorRecord> {
 
 	@Autowired
-	private AuthenticatedInvestorRecordListService listService;
+	private AuthenticatedInvestorRecordListService	listService;
+
+	@Autowired
+	private AuthenticatedInvestorRecordShowService	showService;
 
 
 	@PostConstruct
 	private void initialize() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 }

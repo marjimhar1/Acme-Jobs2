@@ -8,7 +8,12 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
+
+authenticated.investor-record.form.label.investorName = Nombre del inversor:
+authenticated.investor-record.form.label.sector = Sector:
+authenticated.investor-record.form.label.investingStatement = Declaración de inversión
+authenticated.investor-record.form.label.stars = Puntuación:
+
 authenticated.investor-record.list.label.investorName = Nombre del inversor:
 authenticated.investor-record.list.label.sector = Sector:
-authenticated.investor-record.list.label.investingStatement = Declaración de inversión:
 authenticated.investor-record.list.label.stars = Puntuación:

@@ -21,5 +21,9 @@
 	<definition name="authenticated/investor-record/list" extends="master">		
 		<put-attribute name="body" type="template" value="../authenticated/investor-record/list.jsp" />
 	</definition>
+	
+	<definition name="authenticated/investor-record/form" extends="master">		
+		<put-attribute name="body" type="template" value="../authenticated/investor-record/form.jsp" />
+	</definition>
 
 </tiles-definitions>

@@ -13,15 +13,19 @@ import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Anonymous;
 
 @Controller
-@RequestMapping("/anonymous/investorRecord/")
+@RequestMapping("/anonymous/investor-record/")
 public class AnonymousInvestorRecordController extends AbstractController<Anonymous, InvestorRecord> {
 
 	@Autowired
-	private AnonymousInvestorRecordListService listService;
+	private AnonymousInvestorRecordListService	listService;
+
+	@Autowired
+	private AnonymousInvestorRecordShowService	showService;
 
 
 	@PostConstruct
 	private void initialize() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 }

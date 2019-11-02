@@ -1,7 +1,5 @@
 
-package acme.features.anonymous.investorRecord;
-
-import java.util.Collection;
+package acme.features.authenticated.investorRecord;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,14 +7,14 @@ import org.springframework.stereotype.Service;
 import acme.entities.investorRecords.InvestorRecord;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Anonymous;
-import acme.framework.services.AbstractListService;
+import acme.framework.entities.Authenticated;
+import acme.framework.services.AbstractShowService;
 
 @Service
-public class AnonymousInvestorRecordListService implements AbstractListService<Anonymous, InvestorRecord> {
+public class AuthenticatedInvestorRecordShowService implements AbstractShowService<Authenticated, InvestorRecord> {
 
 	@Autowired
-	AnonymousInvestorRecordRepository repository;
+	AuthenticatedInvestorRecordRepository repository;
 
 
 	@Override
@@ -32,16 +30,18 @@ public class AnonymousInvestorRecordListService implements AbstractListService<A
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "investorName", "sector", "stars");
+		request.unbind(entity, model, "investorName", "sector", "investingStatement", "stars");
 	}
 
 	@Override
-	public Collection<InvestorRecord> findMany(final Request<InvestorRecord> request) {
+	public InvestorRecord findOne(final Request<InvestorRecord> request) {
 		assert request != null;
 
-		Collection<InvestorRecord> result;
+		InvestorRecord result;
+		int id;
 
-		result = this.repository.findManyAll();
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneById(id);
 
 		return result;
 	}
