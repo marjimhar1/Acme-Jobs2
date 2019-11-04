@@ -12,6 +12,7 @@ authenticated.investor-record.form.label.investorName = Investor name:
 authenticated.investor-record.form.label.sector = Sector:
 authenticated.investor-record.form.label.investingStatement = Investing Statement:
 authenticated.investor-record.form.label.stars = Stars:
+authenticated.investor-record.form.button.return = Return
 
 authenticated.investor-record.list.label.investorName = Investor name:
 authenticated.investor-record.list.label.sector = Sector:

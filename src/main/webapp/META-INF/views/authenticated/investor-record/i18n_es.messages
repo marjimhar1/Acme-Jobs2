@@ -13,6 +13,7 @@ authenticated.investor-record.form.label.investorName = Nombre del inversor:
 authenticated.investor-record.form.label.sector = Sector:
 authenticated.investor-record.form.label.investingStatement = Declaración de inversión
 authenticated.investor-record.form.label.stars = Puntuación:
+authenticated.investor-record.form.button.return = Volver
 
 authenticated.investor-record.list.label.investorName = Nombre del inversor:
 authenticated.investor-record.list.label.sector = Sector:
