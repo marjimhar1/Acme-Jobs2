@@ -1,7 +1,6 @@
 
 package acme.entities.offers;
 
-import java.beans.Transient;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -50,27 +49,5 @@ public class Offer extends DomainEntity {
 	@Pattern(regexp = "^[R][A-Z]{4}[-][0-9]{5}$")
 	@Column(unique = true)
 	private String				ticker;
-
-
-	@Transient
-	public String getRangePrice() {
-		StringBuilder res;
-
-		/*
-		 * res = new StringBuilder();
-		 * res.append(String.format("%.2f", this.minPrice.getAmount()));
-		 * res.append(this.minPrice.getCurrency());
-		 * res.append("-");
-		 * res.append(String.format("%.2f", this.maxPrice.getAmount()));
-		 * res.append(this.maxPrice.getCurrency());
-		 */
-
-		res = new StringBuilder();
-		res.append(this.minPrice);
-		res.append("-");
-		res.append(this.maxPrice);
-
-		return res.toString().replaceAll("[<][>]", "");
-	}
 
 }
