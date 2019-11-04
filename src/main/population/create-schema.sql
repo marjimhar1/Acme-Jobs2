@@ -6,6 +6,16 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `announcement` (
+       `id` integer not null,
+        `version` integer not null,
+        `moment` datetime(6),
+        `more_info` varchar(255),
+        `text` varchar(255),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `anonymous` (
        `id` integer not null,
         `version` integer not null,
@@ -20,6 +30,38 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `challenge` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `description` varchar(255),
+        `goal_bronze` varchar(255),
+        `goal_gold` varchar(255),
+        `goal_silver` varchar(255),
+        `reward_bronze_amount` double precision,
+        `reward_bronze_currency` varchar(255),
+        `reward_gold_amount` double precision,
+        `reward_gold_currency` varchar(255),
+        `reward_silver_amount` double precision,
+        `reward_silver_currency` varchar(255),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `company_record` (
+       `id` integer not null,
+        `version` integer not null,
+        `ceo` varchar(255),
+        `company_name` varchar(255),
+        `description` varchar(255),
+        `email` varchar(255),
+        `number` varchar(255),
+        `sector` varchar(255),
+        `stars` integer,
+        `website` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `consumer` (
        `id` integer not null,
         `version` integer not null,
@@ -29,18 +71,13 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `offer` (
+    create table `investor_record` (
        `id` integer not null,
         `version` integer not null,
-        `deadline` datetime(6),
-        `max_price_amount` double precision,
-        `max_price_currency` varchar(255),
-        `min_price_amount` double precision,
-        `min_price_currency` varchar(255),
-        `moment` datetime(6),
-        `text` varchar(255),
-        `ticker` varchar(255),
-        `title` varchar(255),
+        `investing_statement` varchar(255),
+        `investor_name` varchar(255),
+        `sector` varchar(255),
+        `stars` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -50,6 +87,19 @@
         `user_account_id` integer,
         `company` varchar(255),
         `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `request` (
+       `id` integer not null,
+        `version` integer not null,
+        `creation_moment` datetime(6),
+        `dead_line` datetime(6),
+        `reward_amount` double precision,
+        `reward_currency` varchar(255),
+        `text` varchar(255),
+        `ticker` varchar(255),
+        `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -71,8 +121,8 @@
 
     insert into `hibernate_sequence` values ( 1 );
 
-    alter table `offer` 
-       add constraint UK_iex7e8fs0fh89yxpcnm1orjkm unique (`ticker`);
+    alter table `request` 
+       add constraint UK_9mxq3powq8tqctclj0fbi2nih unique (`ticker`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
