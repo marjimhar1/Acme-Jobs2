@@ -12,6 +12,7 @@ anonymous.investor-record.form.label.investorName = Investor name:
 anonymous.investor-record.form.label.sector = Sector:
 anonymous.investor-record.form.label.investingStatement = Investing Statement:
 anonymous.investor-record.form.label.stars = Stars:
+anonymous.investor-record.form.button.return = Return
 
 anonymous.investor-record.list.label.investorName = Investor name:
 anonymous.investor-record.list.label.sector = Sector:
