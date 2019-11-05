@@ -48,6 +48,16 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `commercial_banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `picture_url` varchar(255),
+        `slogan` varchar(255),
+        `target_url` varchar(255),
+        `credit_card` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `company_record` (
        `id` integer not null,
         `version` integer not null,
@@ -59,6 +69,14 @@
         `sector` varchar(255),
         `stars` integer,
         `website` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `configuration` (
+       `id` integer not null,
+        `version` integer not null,
+        `spam_threshold` double precision,
+        `spam_words` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -78,6 +96,16 @@
         `investor_name` varchar(255),
         `sector` varchar(255),
         `stars` integer,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `non_commercial_banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `picture_url` varchar(255),
+        `slogan` varchar(255),
+        `target_url` varchar(255),
+        `jingle` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 

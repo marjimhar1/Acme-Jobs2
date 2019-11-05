@@ -30,8 +30,10 @@ master.menu.sign-out = Salir
 
 master.menu.anonymous = Anónimo
 master.menu.anonymous.features.announcement = Anuncios
-master.menu.anonymous.features.company-record = Registros de compañías
-master.menu.anonymous.features.investor-record = Registros de inversiones
+master.menu.anonymous.features.company-record.list-all = Todos los Registros de Compañías
+master.menu.anonymous.features.company-record.list-top = Mejores Registros de Compañías
+master.menu.anonymous.features.investor-record.list-all = Todos los Registros de Inversiones
+master.menu.anonymous.features.investor-record.list-top = Mejores Registros de Inversiones
 
 # master.menu.authenticated ###################################################
 
@@ -46,6 +48,7 @@ master.menu.features.offer = Ofertas
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
+master.menu.administrator.configuration = Configuración
 master.menu.administrator.announcements = Anuncios
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema

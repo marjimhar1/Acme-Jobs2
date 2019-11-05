@@ -1,50 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--
-- sample-data.xml
--
-- Copyright (c) 2019 Rafael Corchuelo.
--
-- In keeping with the traditional purpose of furthering education and research, it is
-- the policy of the copyright owner to permit non-commercial use and redistribution of
-- this software. It has been tested carefully, but it is not guaranteed for any particular
-- purposes.  The copyright owner does not offer any warranties or representations, nor do
-- they accept any liabilities with respect to them.
--->
+<!-- - sample-data.xml - - Copyright (c) 2019 Rafael Corchuelo. - - In keeping with the traditional purpose of furthering education and 
+	research, it is - the policy of the copyright owner to permit non-commercial use and redistribution of - this software. It has been tested 
+	carefully, but it is not guaranteed for any particular - purposes. The copyright owner does not offer any warranties or representations, 
+	nor do - they accept any liabilities with respect to them. -->
 
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
 	<bean id="announcement01" class="acme.entities.announcements.Announcement">
-		<property name="title" value="Sample Announcement 01"/>
-		<property name="moment" value="2019/02/14 10:14"/>
-		<property name="moreInfo"><null/></property>
-		<property name="text" value="Description of announcement"/>
+		<property name="title" value="Sample Announcement 01" />
+		<property name="moment" value="2019/02/14 10:14" />
+		<property name="moreInfo">
+			<null />
+		</property>
+		<property name="text" value="Description of announcement" />
 	</bean>
-	
+
 	<bean id="announcement02" class="acme.entities.announcements.Announcement">
-		<property name="title" value="Sample Announcement 02"/>
-		<property name="moment" value="2019/10/20 15:30"/>
-		<property name="moreInfo" value="http://www.google.es"/>
-		<property name="text" value="Description of announcement 2"/>
+		<property name="title" value="Sample Announcement 02" />
+		<property name="moment" value="2019/10/10 15:30" />
+		<property name="moreInfo" value="http://www.google.es" />
+		<property name="text" value="Description of announcement 2" />
 	</bean>
-	
+
 	<bean id="announcement03" class="acme.entities.announcements.Announcement">
-		<property name="title" value="Sample Announcement 03"/>
-		<property name="moment" value="2018/10/23 23:14"/>
-		<property name="moreInfo" value="http://www.wikipedia.es"/>
-		<property name="text" value="Description of announcement"/>
+		<property name="title" value="Sample Announcement 03" />
+		<property name="moment" value="2018/10/23 23:14" />
+		<property name="moreInfo" value="http://www.wikipedia.es" />
+		<property name="text" value="Description of announcement" />
 	</bean>
-	
+
 	<bean id="announcement04" class="acme.entities.announcements.Announcement">
-		<property name="title" value="Sample Announcement 04"/>
-		<property name="moment" value="2018/12/23 23:14"/>
-		<property name="moreInfo" value="http://www.wikipedia.es"/>
-		<property name="text" value="Description of announcement 4"/>
+		<property name="title" value="Sample Announcement 04" />
+		<property name="moment" value="2018/12/23 23:14" />
+		<property name="moreInfo" value="http://www.wikipedia.es" />
+		<property name="text" value="Description of announcement 4" />
 	</bean>
-	
-	<bean id="announcement05" class="acme.entities.announcements.Announcement">
+  
+  <bean id="announcement05" class="acme.entities.announcements.Announcement">
 		<property name="title" value="Sample Announcement 05"/>
 		<property name="moment" value="2017/07/20 14:25"/>
 		<property name="moreInfo" value="http://www.twitter.com"/>
@@ -57,7 +52,7 @@
 		<property name="moreInfo" value="http://www.telefonodelaesperanza.org"/>
 		<property name="text" value="Description of announcement 6"/>
 	</bean>
-	
+
 	<bean id="request01" class="acme.entities.requests.Request">
 		<property name="title" value="Sample request 01"/>
 		<property name="creationMoment" value="2018/10/15 10:00"/>
@@ -121,49 +116,51 @@
 		<property name="ticker" value="RWASD-59430"/>
 	</bean>
 
-  <bean id="InvestorRecord01" class="acme.entities.investorRecords.InvestorRecord">
-		<property name="investorName" value="InvestorName01"/>
-		<property name="sector" value="Sector01"/>
-		<property name="investingStatement" value="InvestingStatement01"/>
-		<property name="stars" value="4"/>
+	<bean id="InvestorRecord01" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="investorName" value="InvestorName01" />
+		<property name="sector" value="Sector01" />
+		<property name="investingStatement" value="InvestingStatement01" />
+		<property name="stars" value="4" />
 	</bean>
-	
+
 	<bean id="InvestorRecord02" class="acme.entities.investorRecords.InvestorRecord">
-		<property name="investorName" value="InvestorName02"/>
-		<property name="sector" value="Sector02"/>
-		<property name="investingStatement" value="InvestingStatement02"/>
-		<property name="stars" value="0"/>
+		<property name="investorName" value="InvestorName02" />
+		<property name="sector" value="Sector02" />
+		<property name="investingStatement" value="InvestingStatement02" />
+		<property name="stars" value="0" />
 	</bean>
-	
+
 	<bean id="InvestorRecord03" class="acme.entities.investorRecords.InvestorRecord">
-		<property name="investorName" value="InvestorName03"/>
-		<property name="sector" value="Sector03"/>
-		<property name="investingStatement" value="InvestingStatement03"/>
-		<property name="stars" value="5"/>
+		<property name="investorName" value="InvestorName03" />
+		<property name="sector" value="Sector03" />
+		<property name="investingStatement" value="InvestingStatement03" />
+		<property name="stars" value="5" />
 	</bean>
-  
-  <bean id="companyrecord01" class="acme.entities.companyrecords.CompanyRecord">
-		<property name="companyName" value="Arme Yoh Andalucía, Inc."/>
-		<property name="sector" value="Design and Testing"/>
-		<property name="ceo" value="Andrés Fernández Rodríguez"/>
-		<property name="description" value="This is a description"/>
-		<property name="website" value="http://www.example.com"/>
-		<property name="number" value="+2 (678) 1234567"/>
-		<property name="email" value="example@email.com"/>
-		<property name="stars" value="5"/>	
+
+	<bean id="companyrecord01" class="acme.entities.companyrecords.CompanyRecord">
+		<property name="companyName" value="Arme Yoh Andalucía, Inc." />
+		<property name="sector" value="Design and Testing" />
+		<property name="ceo" value="Andrés Fernández Rodríguez" />
+		<property name="description" value="This is a description" />
+		<property name="website" value="http://www.example.com" />
+		<property name="number" value="+2 (678) 1234567" />
+		<property name="email" value="example@email.com" />
+		<property name="stars" value="5" />
 	</bean>
-	
+
 	<bean id="companyrecord02" class="acme.entities.companyrecords.CompanyRecord">
-		<property name="companyName" value="Matutano, LLC"/>
-		<property name="sector" value="Feeding"/>
-		<property name="ceo" value="Mario David Jiménez Hartman"/>
-		<property name="description" value="This is another description"/>
-		<property name="website" value="http://www.example2.com"/>
-		<property name="number" value="(0) 999999"/>
-		<property name="email" value="example2@email.com"/>
-		<property name="stars"><null/></property>
+		<property name="companyName" value="Matutano, LLC" />
+		<property name="sector" value="Feeding" />
+		<property name="ceo" value="Mario David Jiménez Hartman" />
+		<property name="description" value="This is another description" />
+		<property name="website" value="http://www.example2.com" />
+		<property name="number" value="(0) 999999" />
+		<property name="email" value="example2@email.com" />
+		<property name="stars">
+			<null />
+		</property>
 	</bean>
-	
+
 	<bean id="companyrecord03" class="acme.entities.companyrecords.CompanyRecord">
 		<property name="companyName" value="Dothraki Horses, Inc."/>
 		<property name="sector" value="Animal Renting"/>
@@ -264,4 +261,9 @@
     <property name="ticker" value="OACDB-32451"/>
 	</bean>
   
+	<bean id="configuration01" class="acme.entities.configurations.Configuration">
+		<property name="spamThreshold" value="0.01" />
+		<property name="spamWords" value="Sex,Sexo,HardCore,Duro,Viagra,Cialis,Nigeria,You've won,Has ganado,Million dollar,Millón de dólares"/>
+		
+	</bean>
 </beans>
