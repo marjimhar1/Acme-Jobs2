@@ -46,6 +46,7 @@ master.menu.features.offer = Ofertas
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
+master.menu.administrator.configuration = Configuración
 master.menu.administrator.announcements = Anuncios
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
