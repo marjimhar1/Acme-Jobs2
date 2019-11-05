@@ -190,5 +190,19 @@
     <property name="maxPrice" value="122€"/>
     <property name="ticker" value="RACDB-32451"/>
 	</bean>
+	
+	<bean id="commercialbanner01" class="acme.entities.banners.CommercialBanner">
+	<property name="pictureUrl" value="www.twitter.com"/>
+	<property name="slogan" value="Design Thinking"/>
+	<property name="targetUrl" value="www.google.com"/>
+	<property name="creditCard" value="4714148132910056"/>
+	</bean>
+	
+	<bean id="noncommercialbanner01" class="acme.entities.banners.NonCommercialBanner">
+	<property name="pictureUrl" value="www.twitter.com"/>
+	<property name="slogan" value="Design Thinking"/>
+	<property name="targetUrl" value="www.google.com"/>
+	<property name="jingle" value="pocazi"/>
+	</bean>
   
 </beans>
