@@ -29,6 +29,8 @@
 
     drop table if exists `challenge`;
 
+    drop table if exists `commercial_banner`;
+
     drop table if exists `company_record`;
 
     drop table if exists `configuration`;
@@ -36,6 +38,8 @@
     drop table if exists `consumer`;
 
     drop table if exists `investor_record`;
+
+    drop table if exists `non_commercial_banner`;
 
     drop table if exists `offer`;
 

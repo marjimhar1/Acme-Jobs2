@@ -417,4 +417,75 @@ has v</panel_attributes>
 + spamThreshold: Double</panel_attributes>
     <additional_attributes/>
   </element>
+  
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>1080</y>
+      <w>306</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>CommercialBanner
+--
++ creditCard: String (CreditCardNumber, NotBlank)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>171</x>
+      <y>891</y>
+      <w>198</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>/Banner/
+--
++ priceUrl: String (NotBlank)
++ slogan: String (NotBlank)
++ targetUrl: String (NotBlank)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>1080</y>
+      <w>189</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>NonComercialBanner
+--
++ jingle: String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>153</x>
+      <y>963</y>
+      <w>117</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>963</y>
+      <w>162</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;130.0</additional_attributes>
+  </element>
 </diagram>
