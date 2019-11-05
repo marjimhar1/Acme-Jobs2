@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import acme.components.CustomCommand;
 import acme.entities.investorRecords.InvestorRecord;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
@@ -17,15 +18,19 @@ import acme.framework.entities.Anonymous;
 public class AnonymousInvestorRecordController extends AbstractController<Anonymous, InvestorRecord> {
 
 	@Autowired
-	private AnonymousInvestorRecordListService	listService;
+	private AnonymousInvestorRecordListAllService	listAllService;
 
 	@Autowired
-	private AnonymousInvestorRecordShowService	showService;
+	private AnonymousInvestorRecordShowService		showService;
+
+	@Autowired
+	private AnonymousInvestorRecordListTopService	listTopService;
 
 
 	@PostConstruct
 	private void initialize() {
-		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addCustomCommand(CustomCommand.LIST_ALL, BasicCommand.LIST, this.listAllService);
+		super.addCustomCommand(CustomCommand.LIST_TOP, BasicCommand.LIST, this.listTopService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 }

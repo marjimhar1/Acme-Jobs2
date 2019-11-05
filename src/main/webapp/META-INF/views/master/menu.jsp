@@ -20,8 +20,10 @@
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.features.announcement" action="/anonymous/announcement/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.features.company-record" action="/anonymous/company-record/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.features.investor-record" action="/anonymous/investor-record/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.features.company-record.list-all" action="/anonymous/company-record/list-all"/>
+						<acme:menu-suboption code="master.menu.anonymous.features.company-record.list-top" action="/anonymous/company-record/list-top"/>
+			<acme:menu-suboption code="master.menu.anonymous.features.investor-record.list-all" action="/anonymous/investor-record/list-all"/>
+			<acme:menu-suboption code="master.menu.anonymous.features.investor-record.list-top" action="/anonymous/investor-record/list-top"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">

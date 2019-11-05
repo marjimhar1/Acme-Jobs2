@@ -16,7 +16,7 @@ anonymous.company-record.form.label.website = Website:
 anonymous.company-record.form.label.number = Phone Number:
 anonymous.company-record.form.label.email = Email:
 anonymous.company-record.form.label.stars = Number of stars:
-anonymous.company-record.form.label.incorporated = Incorporated:
+anonymous.company-record.form.label.incorporated = Incorporated
 	
 anonymous.company-record.form.button.return = Return
 
