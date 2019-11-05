@@ -72,6 +72,14 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `configuration` (
+       `id` integer not null,
+        `version` integer not null,
+        `spam_threshold` double precision,
+        `spam_words` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `consumer` (
        `id` integer not null,
         `version` integer not null,
