@@ -30,12 +30,97 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `challenge` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `description` varchar(255),
+        `goal_bronze` varchar(255),
+        `goal_gold` varchar(255),
+        `goal_silver` varchar(255),
+        `reward_bronze_amount` double precision,
+        `reward_bronze_currency` varchar(255),
+        `reward_gold_amount` double precision,
+        `reward_gold_currency` varchar(255),
+        `reward_silver_amount` double precision,
+        `reward_silver_currency` varchar(255),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `commercial_banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `picture_url` varchar(255),
+        `slogan` varchar(255),
+        `target_url` varchar(255),
+        `credit_card` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `company_record` (
+       `id` integer not null,
+        `version` integer not null,
+        `ceo` varchar(255),
+        `company_name` varchar(255),
+        `description` varchar(255),
+        `email` varchar(255),
+        `number` varchar(255),
+        `sector` varchar(255),
+        `stars` integer,
+        `website` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `configuration` (
+       `id` integer not null,
+        `version` integer not null,
+        `spam_threshold` double precision,
+        `spam_words` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `consumer` (
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
         `company` varchar(255),
         `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `investor_record` (
+       `id` integer not null,
+        `version` integer not null,
+        `investing_statement` varchar(255),
+        `investor_name` varchar(255),
+        `sector` varchar(255),
+        `stars` integer,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `non_commercial_banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `picture_url` varchar(255),
+        `slogan` varchar(255),
+        `target_url` varchar(255),
+        `jingle` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `offer` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `max_price_amount` double precision,
+        `max_price_currency` varchar(255),
+        `min_price_amount` double precision,
+        `min_price_currency` varchar(255),
+        `moment` datetime(6),
+        `text` varchar(255),
+        `ticker` varchar(255),
+        `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -78,6 +163,9 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+
+    alter table `offer` 
+       add constraint UK_iex7e8fs0fh89yxpcnm1orjkm unique (`ticker`);
 
     alter table `request` 
        add constraint UK_9mxq3powq8tqctclj0fbi2nih unique (`ticker`);
