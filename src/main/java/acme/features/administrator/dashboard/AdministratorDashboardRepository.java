@@ -51,4 +51,16 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 
 	@Query("select stddev(maxPrice.amount) from Offer")
 	Double getMaxSdRewardRequestAmount();
+
+	@Query("select count(*) from CompanyRecord group by sector")
+	Integer[] getCompaniesPerSector();
+
+	@Query("select sector from CompanyRecord group by sector")
+	String[] getCompanySectors();
+
+	@Query("select count(*) from InvestorRecord group by sector")
+	Integer[] getInvestorPerSector();
+
+	@Query("select sector from InvestorRecord group by sector")
+	String[] getInvestorSectors();
 }

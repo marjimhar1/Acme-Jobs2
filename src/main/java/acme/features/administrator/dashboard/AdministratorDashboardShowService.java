@@ -31,7 +31,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert model != null;
 
 		request.unbind(entity, model, "totalAnnouncements", "totalCompanyRecords", "totalInvestorRecords", "minRewardRequest", "maxRewardRequest", "averageRewardRequest", "sdRewardRequest", "minRewardOffer", "maxRewardOffer", "averageRewardOffer",
-			"sdMinRewardOffer", "sdMaxRewardOffer");
+			"sdMinRewardOffer", "sdMaxRewardOffer", "companiesPerSector", "companySectors", "investorsPerSector", "investorSectors");
 	}
 
 	@Override
@@ -75,6 +75,14 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		e.setAmount(this.repository.getMaxSdRewardRequestAmount());
 		e.setCurrency(this.repository.getAverageRewardOfferCurrency());
 		result.setSdMaxRewardOffer(e);
+
+		result.setCompaniesPerSector(this.repository.getCompaniesPerSector());
+
+		result.setCompanySectors(this.repository.getCompanySectors());
+
+		result.setInvestorsPerSector(this.repository.getInvestorPerSector());
+
+		result.setInvestorSectors(this.repository.getInvestorSectors());
 
 		return result;
 	}

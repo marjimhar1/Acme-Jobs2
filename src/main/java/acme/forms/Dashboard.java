@@ -27,4 +27,10 @@ public class Dashboard implements Serializable {
 	Money						averageRewardOffer;
 	Money						sdMinRewardOffer;
 	Money						sdMaxRewardOffer;
+
+	Integer[]					companiesPerSector;
+	String[]					companySectors;
+
+	Integer[]					investorsPerSector;
+	String[]					investorSectors;
 }
