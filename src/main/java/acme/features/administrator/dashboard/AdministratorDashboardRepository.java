@@ -1,6 +1,8 @@
 
 package acme.features.administrator.dashboard;
 
+import java.util.Collection;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
@@ -51,4 +53,10 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 
 	@Query("select stddev(maxPrice.amount) from Offer")
 	Double getMaxSdRewardRequestAmount();
+
+	@Query("select sector, count(*) from CompanyRecord group by sector")
+	Collection<Object[]> getCompaniesPerSector();
+
+	//@Query("select sector from CompanyRecord group by sector")
+	//String[] getCompanySectors();
 }

@@ -30,6 +30,41 @@
 	<acme:form-textbox code="administrator.dashboard.form.label.maxRewardOffer" path="maxRewardOffer"/>
 	<acme:form-textbox code="administrator.dashboard.form.label.averageRewardOffer" path="averageRewardOffer"/>
 	<acme:form-textbox code="administrator.dashboard.form.labelsdMinRewardOffer" path="sdMinRewardOffer"/>	
-	<acme:form-textbox code="administrator.dashboard.form.labelsdMaxRewardOffer" path="sdMaxRewardOffer"/>	
+	<acme:form-textbox code="administrator.dashboard.form.labelsdMaxRewardOffer" path="sdMaxRewardOffer"/>
 	
 </acme:form>
+
+<div>
+	<canvas id="canvas"></canvas>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var data = {
+				labels : [{
+					data :[
+						<jstl:forEach
+							var="prueba"
+							items="${companySectors}">
+						<jstl:out value="${prueba}"/>
+						</jstl:forEach>
+					]
+				}],
+				datasets: [
+					{
+						data : [1.9, 2.0, 3.4]
+					}
+				]
+		};
+		
+		var canvas, context;
+		
+		canvas = document.getElementById("canvas");
+		context = canvas.getContext("2d");
+		new Chart(context, {
+			type : "bar",
+			data : data
+		});
+		
+	});
+</script>
