@@ -1,8 +1,6 @@
 
 package acme.features.administrator.dashboard;
 
-import java.util.Arrays;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,7 +31,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert model != null;
 
 		request.unbind(entity, model, "totalAnnouncements", "totalCompanyRecords", "totalInvestorRecords", "minRewardRequest", "maxRewardRequest", "averageRewardRequest", "sdRewardRequest", "minRewardOffer", "maxRewardOffer", "averageRewardOffer",
-			"sdMinRewardOffer", "sdMaxRewardOffer", "companiesPerSector", "companySectors");
+			"sdMinRewardOffer", "sdMaxRewardOffer", "companiesPerSector", "companySectors", "investorsPerSector", "investorSectors");
 	}
 
 	@Override
@@ -80,7 +78,11 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 
 		result.setCompaniesPerSector(this.repository.getCompaniesPerSector());
 
-		result.setCompanySectors(Arrays.asList(this.repository.getCompanySectors()));
+		result.setCompanySectors(this.repository.getCompanySectors());
+
+		result.setInvestorsPerSector(this.repository.getInvestorPerSector());
+
+		result.setInvestorSectors(this.repository.getInvestorSectors());
 
 		return result;
 	}

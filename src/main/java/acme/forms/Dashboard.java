@@ -2,7 +2,6 @@
 package acme.forms;
 
 import java.io.Serializable;
-import java.util.Collection;
 
 import acme.framework.datatypes.Money;
 import lombok.Getter;
@@ -30,5 +29,8 @@ public class Dashboard implements Serializable {
 	Money						sdMaxRewardOffer;
 
 	Integer[]					companiesPerSector;
-	Collection<String>			companySectors;
+	String[]					companySectors;
+
+	Integer[]					investorsPerSector;
+	String[]					investorSectors;
 }

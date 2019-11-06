@@ -31,6 +31,7 @@
 	<acme:form-textbox code="administrator.dashboard.form.label.averageRewardOffer" path="averageRewardOffer"/>
 	<acme:form-textbox code="administrator.dashboard.form.labelsdMinRewardOffer" path="sdMinRewardOffer"/>	
 	<acme:form-textbox code="administrator.dashboard.form.labelsdMaxRewardOffer" path="sdMaxRewardOffer"/>
+
 	
 </acme:form>
 
@@ -38,33 +39,73 @@
 	<canvas id="canvas"></canvas>
 </div>
 
+<div>
+	<canvas id="canvas2"></canvas>
+</div>
+
+
 <script type="text/javascript">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 	$(document).ready(function(){
 		var data = {
-				labels : [{
-					data :[
-						<jstl:forEach
-							var="prueba"
-							items="${companySectors}">
-						<jstl:out value="${prueba}"/>
-						</jstl:forEach>
+				labels :   [<jstl:forEach var="item" items="${companySectors}" >
+								"${item}",
+							</jstl:forEach>],  
+				datasets: [
+					{	label : "Number of Companies in the following sectors",
+						data : [<jstl:forEach var="item" items="${companiesPerSector}" >
+									<jstl:out value="${item}" />,
+								</jstl:forEach>
+								]
+						
+					}
+				]
+		};
+		var options = {
+				scales : {
+					yAxes : [{
+						ticks : {
+							suggestedMin: 0.0
+						}
+					}
 					]
-				}],
+				}
+		};
+		var data2 = {
+				labels :   [<jstl:forEach var="item" items="${investorSectors}" >
+								"${item}",
+							</jstl:forEach>],  
 				datasets: [
 					{
-						data : [1.9, 2.0, 3.4]
+						label : "Number of Investors in the following sectors",
+						data : [<jstl:forEach var="item" items="${investorsPerSector}" >
+									<jstl:out value="${item}" />,
+								</jstl:forEach>
+								]
+						
 					}
 				]
 		};
 		
-		var canvas, context;
+		var canvas, context, canvas2, context2;
 		
 		canvas = document.getElementById("canvas");
+		canvas2 = document.getElementById("canvas2")
 		context = canvas.getContext("2d");
+		context2 = canvas2.getContext("2d");
 		new Chart(context, {
 			type : "bar",
-			data : data
+			data : data,
+			options : options
 		});
+		
+		new Chart(context2,{
+			type : "bar",
+			data : data2,
+			options : options
+		});
+		
 		
 	});
 </script>
